@@ -13,6 +13,8 @@ cp -rfv "$GITHUB_WORKSPACE"/* ./
 cp -fv "$WORKPATH"/PKGBUILD ./
 echo "::endgroup::"
 
+pacman -Sy
+
 # Update archlinux-keyring
 if [[ $INPUT_ARCHLINUX_KEYRING == true ]]; then
     echo "::group::Updating archlinux-keyring"
